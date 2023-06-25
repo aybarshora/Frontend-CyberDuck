@@ -8,4 +8,4 @@ function LuckyDrop() {
   )
 }
 
-export default Login
+export default LuckyDrop
