@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import qush_logo from '../assets/qush_logo.png';
+import cdc_logo from '../assets/CDC-logo.png';
 import { ConnectWallet } from "@thirdweb-dev/react";
 
 const style = {
@@ -28,7 +28,7 @@ const Header = () => {
     return (
         <div className={style.wrapper}> 
             <div className={style.headerLogo}>
-                <Image src={qush_logo} alt='uniswap' height={100} width={100} />
+                <Image src={cdc_logo} alt='uniswap' height={100} width={100} />
             </div>
             <div className={style.nav}>
                 <div className={style.navItemsContainer}>

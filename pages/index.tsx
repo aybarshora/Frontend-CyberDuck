@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   return (
     <div className={style.wrapper}>
       <Head>
-        <title>Qush App</title>
+        <title>CyberDuckCoin App</title>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Header />
