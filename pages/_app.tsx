@@ -10,9 +10,12 @@ import {
   paperWallet,
   magicLink,
 } from "@thirdweb-dev/react";
+import Header from '../components/Header';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
+    <>
+    
     <ThirdwebProvider
       supportedWallets={[
         metamaskWallet(),
@@ -22,11 +25,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       activeChain="ethereum"
       
     >
+      <Header />
       <Component {...pageProps} />
       </ThirdwebProvider>
 
-     
+      </>
   )
+ 
 }
 
 export default MyApp

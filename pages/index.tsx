@@ -14,7 +14,7 @@ const Home: NextPage = () => {
         <title>CyberDuckCoin App</title>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <Header />
+    
       <Main />
     </div>
   )

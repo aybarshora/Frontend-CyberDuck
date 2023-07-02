@@ -1,8 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import cdc_logo from '../assets/CDC-logo.png';
 import { ConnectWallet } from "@thirdweb-dev/react";
+import { useRouter } from 'next/router';
+import { Main } from './Main';
+
 
 const style = {
     wrapper: `p-4 w-screen flex justify-between items-center`,
@@ -21,21 +23,44 @@ const style = {
 
 const Header = () => {
     const [selectedNav, setSelectedNav] = useState('Trade')
-    const navItems: string[] = ['Trade', 'Lucky Drop', 'Earn']
+    const navItems: string[] = ['Trade', 'LuckyDrop', 'Earn']
 
+    const router = useRouter();
+
+    const changePage = (item: string) => {
+        if (item === "Trade"){router.push("/")}
+        else{
+        router.push("/" + item);}
+      };
+
+    const oneFunc = (item: string) =>{
+
+        setSelectedNav(item);
+        changePage(item);
+    } 
+
+    useEffect(() => {
+        let path = router.pathname.substring(1);
+        if(path === ''){
+            setSelectedNav('Trade');
+        }else
+        setSelectedNav(path);
+    })
 
 
     return (
         <div className={style.wrapper}> 
             <div className={style.headerLogo}>
-                <Image src={cdc_logo} alt='uniswap' height={100} width={100} />
+                <Image src={cdc_logo} alt='cdc-logo' height={100} width={100} />
             </div>
             <div className={style.nav}>
                 <div className={style.navItemsContainer}>
                     {navItems.map((item, index) => {
                         return (
                             <div key={index}
-                                onClick={() => setSelectedNav(item)}
+                                onClick={
+                                    () => oneFunc(item)
+                                }
                                 className={`${style.navItem} ${selectedNav === item && style.activeNavItem
                                     }`}
                             >

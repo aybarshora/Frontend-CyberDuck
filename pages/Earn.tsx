@@ -1,7 +1,5 @@
-import Modal from 'react-modal';
 import React, { useContext } from 'react'
 
-Modal.setAppElement('#__next')
 
 const style = {
     wrapper: `w-screen flex items-center justify-center mt-14 pb-5`,
@@ -34,15 +32,17 @@ const customStyles = {
     },
 }
 
-export const Main: React.FC = (item) => {
+export const Earn = () => {
    
 
     return (
         <div>
         
         <div className={style.wrapper}>
-            <h1>main</h1>
+            <h1>earn</h1>
         </div>
         </div>
     )
 }
+
+export default Earn;
