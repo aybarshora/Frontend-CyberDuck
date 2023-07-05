@@ -5,7 +5,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {backgroundImage: {
+      'cdc-bg': "url('./assets/cdc-background.png')"
+    }},
   },
   plugins: [],
 }

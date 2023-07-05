@@ -3,7 +3,6 @@ import Image from 'next/image';
 import cdc_logo from '../assets/CDC-logo.png';
 import { ConnectWallet } from "@thirdweb-dev/react";
 import { useRouter } from 'next/router';
-import { Main } from './Main';
 
 
 const style = {
@@ -73,7 +72,7 @@ const Header = () => {
             </div>
             <div className={style.buttonsContainer}>
                 <div className={style.buttonPadding} >
-                <ConnectWallet  />;
+                <ConnectWallet  />
                 </div>
             </div>
         </div>

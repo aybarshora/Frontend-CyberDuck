@@ -36,7 +36,7 @@ export const Earn = () => {
    
 
     return (
-        <div>
+        <div >
         
         <div className={style.wrapper}>
             <h1>earn</h1>
