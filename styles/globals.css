@@ -6,3 +6,12 @@
 .bg-cdc{
     background-image: url(/assets/cdc-background.png);
   }
+
+.rectangle {
+    flex:content;
+    width: 362px;
+    height: 63px;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+  }
+  

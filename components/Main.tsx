@@ -17,7 +17,7 @@ const style = {
     currencySelectorArrow: `text-lg`,
     confirmButton: `bg-cdc my-2 rounded-2xl py-4 px-8 text-xl font-semibold flex items-center justify-center cursor-pointer border border-[#2172E5] hover:border-[#234169]`,
     textGame: `font-nunito text-center text-4xl subpixel-antialiased font-bold uppercase text-[#E8AA42] `,
-    bg: `bg`,
+    
 }
 
 const customStyles = {
@@ -40,7 +40,7 @@ export const Main: React.FC = () => {
    
 
     return (
-        <div >
+        <div className='bg-cdc'>
         
         <div className={style.wrapper}>
             <h1>Main/Trade</h1>

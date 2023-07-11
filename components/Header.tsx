@@ -52,7 +52,7 @@ const Header = () => {
             <div className={style.headerLogo}>
                 <Image src={cdc_logo} alt='cdc-logo' height={100} width={100} />
             </div>
-            <div className={style.nav}>
+            
                 <div className={style.navItemsContainer}>
                     {navItems.map((item, index) => {
                         return (
@@ -68,7 +68,7 @@ const Header = () => {
                         )
                     })}
                    
-                </div>
+              
             </div>
             <div className={style.buttonsContainer}>
                 <div className={style.buttonPadding} >
